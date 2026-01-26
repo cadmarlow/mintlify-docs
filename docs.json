@@ -1,68 +1,92 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "tldr.work Documentation",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#000000",
+    "light": "#333333",
+    "dark": "#000000"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Overview",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "quickstart"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Introduction",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "introduction/what-is-tldr",
+              "introduction/how-it-works",
+              "introduction/key-features",
+              "introduction/use-cases"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Getting Started",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "getting-started/sign-up",
+              "getting-started/first-steps",
+              "getting-started/workspace-setup",
+              "getting-started/api-keys"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Sales Automation",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
+              "sales-automation/overview",
+              "sales-automation/finding-prospects",
+              "sales-automation/enrichment",
+              "sales-automation/email-generation",
+              "sales-automation/creating-campaigns",
+              "sales-automation/tracking-analytics"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "AI Search Analytics",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "ai-search/overview",
+              "ai-search/creating-projects",
+              "ai-search/domain-analysis",
+              "ai-search/prompt-generation",
+              "ai-search/running-analysis",
+              "ai-search/understanding-metrics",
+              "ai-search/competitors",
+              "ai-search/optimization-tips"
+            ]
+          },
+          {
+            "group": "Billing & Plans",
+            "pages": [
+              "billing/plans",
+              "billing/usage-tracking",
+              "billing/upgrading",
+              "billing/credits"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/firecrawl",
+              "integrations/hunter",
+              "integrations/openrouter",
+              "integrations/resend"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/best-practices",
+              "guides/prompt-engineering",
+              "guides/email-copywriting",
+              "guides/troubleshooting"
             ]
           }
         ]
@@ -71,14 +95,19 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Website",
+          "href": "https://www.tldr.work",
+          "icon": "globe"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Dashboard",
+          "href": "https://app.tldr.work",
+          "icon": "rocket"
+        },
+        {
+          "anchor": "Support",
+          "href": "mailto:support@tldr.work",
+          "icon": "envelope"
         }
       ]
     }
@@ -90,33 +119,28 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Start Free Trial",
+        "href": "https://app.tldr.work/register"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://app.tldr.work"
     }
   },
   "contextual": {
     "options": [
      "copy",
-     "view",
      "chatgpt",
      "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
+     "perplexity"
    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/tldrwork",
+      "linkedin": "https://linkedin.com/company/tldrwork"
     }
   }
 }

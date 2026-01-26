@@ -1,0 +1,257 @@
+---
+title: "Prompt Generation"
+description: "AI creates 10 realistic test queries to check your brand visibility"
+---
+
+# Prompt Generation
+
+GPT-5-mini generates 10 realistic queries people might ask AI about your industry.
+
+---
+
+## How It Works
+
+Based on your domain analysis, AI creates:
+- **1 Brand prompt**: "What is [Your Company]?"
+- **1 Product prompt**: "What does [Your Company] offer?"
+- **3 Competitor prompts**: "Best [your category]" lists
+- **5 Intent prompts**: Discovery queries (MOST VALUABLE!)
+
+---
+
+## Step-by-Step
+
+### Step 1: Click "Generate Prompts"
+
+In your project, click **"Generate Prompts"**
+
+### Step 2: Choose Language
+
+<ParamField path="language" type="select" default="en">
+  **Prompt Language**
+</ParamField>
+
+**Options**: English, French, Spanish, German, Italian, Portuguese
+
+<Tip>
+Generate prompts in your target market's language!
+</Tip>
+
+### Step 3: Wait for Generation
+
+GPT-5-mini creates 10 prompts (~10 seconds)
+
+### Step 4: Review Prompts
+
+<Frame>
+  <img src="/images/generated-prompts.png" alt="Generated prompts list" />
+</Frame>
+
+Each prompt shows:
+- **Text**: The query
+- **Category**: Brand, Product, Competitor, Intent
+- **Active**: Toggle on/off
+- **Edit/Delete**: Modify or remove
+
+---
+
+## Prompt Categories Explained
+
+### Brand Prompts ✅
+
+**Can mention your brand name.**
+
+**Examples**:
+- "What is Acme Inc?"
+- "Tell me about Acme"
+- "Who owns Acme?"
+
+**Expected visibility**: 90-100%  
+**Goal**: Verify AI has correct info
+
+### Product Prompts ✅
+
+**Can mention your brand name.**
+
+**Examples**:
+- "What services does Acme offer?"
+- "What is Acme's main product?"
+
+**Expected visibility**: 80-100%  
+**Goal**: Ensure AI knows your offerings
+
+### Competitor Prompts ❌
+
+**Must NOT mention your brand name.**
+
+**Examples**:
+- "Best CRM for startups"
+- "Top alternatives to Salesforce"
+- "Acme vs HubSpot comparison"
+
+**Expected visibility**: 30-60%  
+**Goal**: Appear in recommendation lists
+
+### Intent Prompts ❌ ⭐
+
+**Must NOT mention your brand name. MOST VALUABLE!**
+
+**Examples**:
+- "What's the best tool for sales automation?"
+- "I need a CRM for my startup, what do you recommend?"
+- "How do I automate prospecting?"
+
+**Expected visibility**: 10-30% (> 20% is excellent!)  
+**Goal**: Get recommended organically
+
+<Warning>
+Intent prompts test if AI recommends you when users DON'T know you exist yet. This is the highest ROI category!
+</Warning>
+
+---
+
+## Editing Prompts
+
+### Modify Prompt Text
+
+1. Click **"Edit"** icon
+2. Change text
+3. Click **"Save"**
+
+<Tip>
+Make prompts more specific to your use case:  
+Generic: "Best CRM"  
+Better: "Best CRM for 10-person sales teams"
+</Tip>
+
+### Toggle Active/Inactive
+
+Click toggle switch to enable/disable a prompt.
+
+**Use cases**:
+- Test subset of prompts (save credits)
+- Disable low-value prompts
+- Focus on intent prompts
+
+### Add Custom Prompt
+
+Click **"+ Add Prompt"**
+
+1. Enter prompt text
+2. Choose category
+3. Click **"Save"**
+
+**Examples**:
+- Industry-specific queries
+- Location-based queries
+- Competitor comparisons
+
+### Delete Prompt
+
+Click **"Delete"** icon → Confirm
+
+<Warning>
+Deleted prompts can't be recovered. You'll need to add manually or regenerate all.
+</Warning>
+
+---
+
+## Prompt Validation
+
+### Automatic Validation
+
+tldr.work checks that **Intent** and **Generic** prompts DON'T contain your brand name.
+
+**Why?** These prompts test organic discovery. Mentioning your brand defeats the purpose.
+
+**If validation fails**:
+- Prompt is reclassified to "Brand" category
+- Warning shown in UI
+- Fix manually or regenerate
+
+### Manual Check
+
+Review each prompt:
+- ✅ **Good intent prompt**: "Best CRM for startups"
+- ❌ **Bad intent prompt**: "Is Acme a good CRM for startups?" (mentions brand)
+
+---
+
+## Best Practices
+
+### Intent Prompts Should Be Specific
+
+<Tabs>
+  <Tab title="❌ Too Vague">
+    "What are trends in CRM?"
+    
+    **Problem**: Too broad, won't mention brands
+  </Tab>
+  
+  <Tab title="✅ Specific">
+    "What's the best CRM for a 10-person sales team?"
+    
+    **Why it works**: Actionable query, AI gives recommendations
+  </Tab>
+</Tabs>
+
+### Include Location (If Relevant)
+
+For local businesses:
+- "Best bakery in Paris"
+- "Top real estate agent in Lyon"
+- "Where to buy organic food in Bordeaux"
+
+### Test Competitor Comparisons
+
+Add prompts like:
+- "Acme vs Competitor X"
+- "Why choose Acme over Competitor Y?"
+- "Acme alternative"
+
+---
+
+## Multi-Language Support
+
+Generate prompts in target market language:
+
+<CodeGroup>
+```text English
+"What's the best CRM for startups?"
+```
+
+```text French
+"Quel est le meilleur CRM pour les startups ?"
+```
+
+```text Spanish
+"¿Cuál es el mejor CRM para startups?"
+```
+
+```text German
+"Was ist das beste CRM für Startups?"
+```
+</CodeGroup>
+
+<Info>
+AI engines respond in the same language as the prompt!
+</Info>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Run Analysis" icon="play" href="/ai-search/running-analysis">
+    Test prompts on 5 AI engines
+  </Card>
+  <Card title="Optimization Tips" icon="lightbulb" href="/ai-search/optimization-tips">
+    Learn prompt engineering best practices
+  </Card>
+</CardGroup>
+
+---
+
+<Check>
+**Prompts ready!** Next: [Run your analysis →](/ai-search/running-analysis)
+</Check>

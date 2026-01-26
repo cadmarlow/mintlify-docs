@@ -1,0 +1,361 @@
+---
+title: "Workspace Setup"
+description: "Configure your tldr.work workspace with company information and preferences"
+---
+
+# Workspace Setup
+
+Your workspace is the central hub for your team. Configure it properly to get the most out of tldr.work.
+
+---
+
+## What is a Workspace?
+
+A **workspace** is your organization's container in tldr.work. It includes:
+
+- All prospects and campaigns
+- AI monitoring projects
+- Team members (coming soon)
+- Billing and usage data
+- API key configuration
+- Settings and preferences
+
+<Info>
+One workspace = one billing account. Create separate workspaces for different businesses/clients (coming soon).
+</Info>
+
+---
+
+## Accessing Workspace Settings
+
+Go to **Settings** (sidebar) > **Workspace**
+
+<Frame>
+  <img src="/images/workspace-settings.png" alt="Workspace settings page" />
+</Frame>
+
+---
+
+## Basic Settings
+
+### Workspace Name
+
+**What it is**: Display name for your workspace (e.g., "Acme Inc", "John's Agency")
+
+**Where it appears**:
+- Dashboard header
+- Email sender name (if not customized)
+- Billing invoices
+
+<ParamField path="name" type="string" required>
+  Your company or personal brand name
+</ParamField>
+
+**Example**: Change from default "User's Workspace" to "Acme Marketing"
+
+---
+
+## Email Settings
+
+Configure how your campaigns appear to recipients.
+
+### From Name
+
+<ParamField path="fromName" type="string">
+  **Sender name in emails**
+  
+  Default: Your account name. Customize for better personalization.
+</ParamField>
+
+**Examples**:
+- "John from Acme" (personal touch)
+- "Acme Sales Team" (company brand)
+- "Marie - Marketing Expert" (personal brand)
+
+<Tip>
+Personal names ("John") get **30% better open rates** than company names ("Acme Inc").
+</Tip>
+
+### From Email
+
+<ParamField path="fromEmail" type="string">
+  **Sender email address**
+  
+  Must be verified with Resend. Default: your account email.
+</ParamField>
+
+**Requirements**:
+- Must be a real email you own
+- Will receive replies from prospects
+- Should match your domain for best deliverability
+
+<Warning>
+Using a different email than your signup email requires verification. Check your inbox for verification email.
+</Warning>
+
+---
+
+## Campaign Settings
+
+### Daily Email Limit
+
+<ParamField path="dailyEmailLimit" type="number" default={50}>
+  **Maximum emails sent per day**
+  
+  Range: 10-500. Default: 50 emails/day.
+</ParamField>
+
+**Why limit emails?**
+- Prevents spam filters from flagging your domain
+- Maintains sender reputation
+- Gradual warm-up for new accounts
+
+**Recommendations**:
+
+| Account Age | Recommended Limit |
+|-------------|-------------------|
+| New (< 1 week) | 20-30/day |
+| Medium (1-4 weeks) | 50-100/day |
+| Established (> 1 month) | 100-200/day |
+| Warm domain (> 6 months) | 200-500/day |
+
+<Info>
+Start low and increase gradually. Sudden spikes trigger spam filters!
+</Info>
+
+### Tracking Enabled
+
+<ParamField path="trackingEnabled" type="boolean" default={true}>
+  **Enable open and click tracking**
+  
+  Tracks when recipients open emails and click links.
+</ParamField>
+
+**How it works**:
+- **Opens**: 1x1 pixel image loaded when email opened
+- **Clicks**: Links rewritten to track clicks before redirecting
+
+**Privacy note**: Some email clients block tracking pixels. Real open rate is typically 10-20% higher than tracked.
+
+<Tip>
+Disable tracking for personal/sensitive campaigns to avoid seeming "salesy".
+</Tip>
+
+---
+
+## API Key Configuration
+
+By default, tldr.work uses **shared API keys** so you can start immediately.
+
+### Why Add Your Own Keys?
+
+<CardGroup cols={2}>
+  <Card title="Lower Costs" icon="euro-sign">
+    Save up to 50% by using at-cost pricing (no 40% margin)
+  </Card>
+  <Card title="Higher Limits" icon="chart-line">
+    Your own API quotas (e.g., Hunter 5,000 searches/month)
+  </Card>
+  <Card title="More Control" icon="sliders">
+    Manage rate limits and quotas directly
+  </Card>
+  <Card title="Data Ownership" icon="shield-check">
+    API calls go through your account (better privacy)
+  </Card>
+</CardGroup>
+
+### How to Add Keys
+
+Go to **Settings** > **API Keys**
+
+You'll see four sections:
+
+<Accordion title="1. Firecrawl API Key" icon="spider">
+  **Used for**: Prospect search and domain scraping
+  
+  **Get your key**: [firecrawl.dev](https://firecrawl.dev)
+  
+  **Cost**: ~$20/month for 5,000 scrapes
+  
+  **tldr.work charge**: €0.05/search (with 40% margin)  
+  **Your own key**: €0.03/search (at-cost)
+</Accordion>
+
+<Accordion title="2. Hunter.io API Key" icon="envelope">
+  **Used for**: Email finding and verification
+  
+  **Get your key**: [hunter.io/api-keys](https://hunter.io/api-keys)
+  
+  **Cost**: $49/month for 5,000 searches or $0.01/search
+  
+  **tldr.work charge**: €0.02/email  
+  **Your own key**: €0.014/email (at-cost)
+</Accordion>
+
+<Accordion title="3. OpenRouter API Key" icon="robot">
+  **Used for**: AI queries (ChatGPT, Claude, Gemini, etc.)
+  
+  **Get your key**: [openrouter.ai/keys](https://openrouter.ai/keys)
+  
+  **Cost**: Pay-per-use (~$5/1M tokens, varies by model)
+  
+  **tldr.work charge**: €0.05-0.15/query (with margin)  
+  **Your own key**: €0.035-0.10/query (at-cost)
+</Accordion>
+
+<Accordion title="4. Resend API Key" icon="paper-plane">
+  **Used for**: Sending campaign emails
+  
+  **Get your key**: [resend.com/api-keys](https://resend.com/api-keys)
+  
+  **Cost**: $20/month for 50,000 emails or $0.0001/email
+  
+  **tldr.work charge**: €0.001/email  
+  **Your own key**: €0.0001/email (10x cheaper!)
+</Accordion>
+
+<Info>
+See detailed setup guide: [API Keys Configuration](/getting-started/api-keys)
+</Info>
+
+---
+
+## Notification Preferences
+
+### Email Notifications
+
+<ParamField path="notifications.email" type="object">
+  Configure email alerts
+</ParamField>
+
+**What you'll receive**:
+- ✅ Campaign completed
+- ⚠️ Low credit balance (< 10%)
+- 📊 Weekly performance summary
+- 🔔 Prospect replies detected
+
+**Frequency options**:
+- **Instant**: Real-time alerts
+- **Daily digest**: One email/day with summary
+- **Weekly digest**: One email/week
+- **Off**: No email notifications
+
+<Tip>
+Use "Daily digest" to avoid inbox clutter while staying informed.
+</Tip>
+
+### In-App Notifications
+
+<ParamField path="notifications.inApp" type="boolean" default={true}>
+  Show notifications in dashboard
+</ParamField>
+
+**Appears in**:
+- Activity console (bottom-right)
+- Notification bell (top-right)
+- Toast messages for important events
+
+---
+
+## Team Management (Coming Soon)
+
+Future features:
+
+- **Invite team members**: Share workspace with colleagues
+- **Role-based access**: Admin, Manager, Viewer permissions
+- **Activity log**: See who did what and when
+- **API key permissions**: Control who can modify settings
+
+---
+
+## Saving Changes
+
+<Steps>
+  <Step title="Make your changes">
+    Update any settings on the workspace page
+  </Step>
+  <Step title="Click Save">
+    Blue "Save Changes" button at bottom
+  </Step>
+  <Step title="Confirmation">
+    Green toast: "Workspace settings updated successfully"
+  </Step>
+</Steps>
+
+<Warning>
+Changes apply immediately. Existing campaigns use old settings until relaunched.
+</Warning>
+
+---
+
+## Best Practices
+
+### Email Settings
+- ✅ Use your real name for personal outreach
+- ✅ Use company name for brand awareness campaigns
+- ✅ Match sender email to your domain (john@acme.com, not gmail.com)
+- ❌ Don't use no-reply@ addresses (kills engagement)
+
+### Daily Limits
+- ✅ Start low (20-30/day) for new accounts
+- ✅ Increase gradually (10-20% per week)
+- ✅ Monitor bounce rate (should be < 5%)
+- ❌ Don't send 500 emails on day 1 (instant spam flag)
+
+### API Keys
+- ✅ Add your own keys if sending > 100 emails/week
+- ✅ Use dedicated API accounts (don't share with other tools)
+- ✅ Monitor API usage in each service's dashboard
+- ❌ Don't share API keys with others (security risk)
+
+---
+
+## Common Questions
+
+<AccordionGroup>
+  <Accordion title="Can I change workspace name anytime?">
+    Yes! Update anytime in Settings > Workspace. Takes effect immediately.
+  </Accordion>
+
+  <Accordion title="Will changing 'From Name' affect old campaigns?">
+    No. Old campaigns keep their original sender name. New campaigns use the updated name.
+  </Accordion>
+
+  <Accordion title="What if I exceed my API key limits?">
+    If using your own keys: API requests fail until you upgrade your API plan.  
+    If using shared keys: tldr.work charges your credits until balance depletes.
+  </Accordion>
+
+  <Accordion title="Can I have multiple workspaces?">
+    Not yet. Multi-workspace support coming soon. Contact support@tldr.work if you need this now.
+  </Accordion>
+
+  <Accordion title="How do I delete my workspace?">
+    Settings > Workspace > Delete Workspace (bottom). **WARNING**: This deletes ALL data (prospects, campaigns, analyses). Cannot be undone!
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Configure API Keys" icon="key" href="/getting-started/api-keys">
+    Detailed guide to adding your own API keys
+  </Card>
+  <Card title="Find Prospects" icon="magnifying-glass" href="/sales-automation/finding-prospects">
+    Start building your lead database
+  </Card>
+  <Card title="Create Campaign" icon="envelope" href="/sales-automation/creating-campaigns">
+    Send your first automated campaign
+  </Card>
+  <Card title="AI Monitoring" icon="chart-line" href="/ai-search/creating-projects">
+    Track brand visibility on AI engines
+  </Card>
+</CardGroup>
+
+---
+
+<Check>
+**Workspace configured!** You're ready to start using tldr.work at full capacity.
+</Check>

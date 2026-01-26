@@ -1,0 +1,136 @@
+---
+title: "Creating Projects"
+description: "Set up AI brand monitoring for your website or client websites"
+---
+
+# Creating AI Search Projects
+
+Start tracking your brand visibility on ChatGPT, Claude, Gemini, Perplexity, and Mistral.
+
+---
+
+## Step-by-Step Guide
+
+### Step 1: Open New Project
+
+Go to **Analytics** > **AI Search** > **+ New Project**
+
+### Step 2: Enter Domain
+
+<ParamField path="domain" type="string" required>
+  **Your Website Domain**
+  
+  Enter without `https://` or `www.`
+</ParamField>
+
+**Examples**:
+- ✅ `acme.com`
+- ✅ `my-startup.io`
+- ❌ `https://www.acme.com` (remove protocol)
+
+<ParamField path="name" type="string">
+  **Project Name** (optional)
+  
+  Friendly name for organization
+</ParamField>
+
+**Examples**:
+- "Acme Inc - Main Brand"
+- "Client: Beta Corp"
+- "Competitor: Gamma"
+
+### Step 3: Create Project
+
+Click **"Create Project"**
+
+Your project is now created! Next steps:
+1. [Analyze Domain](/ai-search/domain-analysis)
+2. [Generate Prompts](/ai-search/prompt-generation)
+3. [Run Analysis](/ai-search/running-analysis)
+
+---
+
+## Managing Projects
+
+### Project List
+
+View all projects in **Analytics** > **AI Search**
+
+Each card shows:
+- Domain and name
+- Setup status (Ready, Setup needed)
+- Last analysis date
+- Quick actions (Analyze, Settings, Delete)
+
+### Project Status
+
+| Status | Meaning | Next Action |
+|--------|---------|-------------|
+| **Setup** | Domain not analyzed yet | Click "Analyze Domain" |
+| **Ready** | Can run analysis | Click "Run Analysis" |
+| **Analyzing** | Analysis in progress | Wait for completion |
+
+### Editing Projects
+
+Click on project → **Settings** to:
+- Change project name
+- Update domain
+- View project info
+- Delete project
+
+<Warning>
+Deleting a project removes ALL analysis history. Cannot be undone!
+</Warning>
+
+---
+
+## Multi-Project Setup
+
+### Use Cases
+
+<Tabs>
+  <Tab title="Own Brand + Competitors">
+    Track yourself + 3-5 competitors simultaneously
+    
+    **Example**:
+    - Project 1: mycompany.com
+    - Project 2: competitor1.com
+    - Project 3: competitor2.com
+  </Tab>
+  
+  <Tab title="Agency: Multiple Clients">
+    One project per client
+    
+    **Example**:
+    - Project 1: client-a.com
+    - Project 2: client-b.com
+    - Project 3: client-c.com
+  </Tab>
+  
+  <Tab title="Multiple Brands">
+    If you own multiple companies
+    
+    **Example**:
+    - Project 1: brand1.com
+    - Project 2: brand2.com
+  </Tab>
+</Tabs>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Analyze Domain" icon="magnifying-glass" href="/ai-search/domain-analysis">
+    Extract business info from your website
+  </Card>
+  <Card title="Generate Prompts" icon="message" href="/ai-search/prompt-generation">
+    Create test queries for AI engines
+  </Card>
+</CardGroup>
+
+---
+
+<Check>
+**Project created!** Next: [Analyze your domain →](/ai-search/domain-analysis)
+</Check>

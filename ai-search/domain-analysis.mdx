@@ -1,0 +1,180 @@
+---
+title: "Domain Analysis"
+description: "AI automatically extracts your business information from your website"
+---
+
+# Domain Analysis
+
+GPT-5-mini scrapes your website and extracts business information automatically.
+
+---
+
+## What Gets Analyzed
+
+<CardGroup cols={2}>
+  <Card title="Company Name" icon="building">
+    Official business name
+  </Card>
+  <Card title="Industry/Sector" icon="industry">
+    Your business category
+  </Card>
+  <Card title="Description" icon="file-lines">
+    What your company does (1-2 sentences)
+  </Card>
+  <Card title="Services" icon="list">
+    Your main products/offerings
+  </Card>
+  <Card title="Keywords" icon="tags">
+    5-10 relevant keywords
+  </Card>
+  <Card title="Location" icon="location-dot">
+    Primary market/geography
+  </Card>
+  <Card title="Competitors" icon="users">
+    AI suggests 3-5 likely competitors
+  </Card>
+</CardGroup>
+
+---
+
+## Step-by-Step
+
+### Step 1: Click "Analyze Domain"
+
+In your project page, click **"Analyze Domain"**
+
+### Step 2: AI Scrapes Website
+
+Firecrawl extracts:
+- Homepage content
+- About page
+- Services page
+- Metadata (title, description)
+
+**Time**: ~20 seconds
+
+### Step 3: AI Extracts Info
+
+GPT-5-mini analyzes content and structures data.
+
+**Time**: ~10 seconds
+
+### Step 4: Review Results
+
+<Frame>
+  <img src="/images/domain-analysis-results.png" alt="Domain analysis results" />
+</Frame>
+
+**You can edit**:
+- Company name
+- Description
+- Services
+- Keywords
+- Competitors
+
+<Tip>
+Add more keywords/competitors manually for better prompt generation!
+</Tip>
+
+---
+
+## Example Analysis
+
+**Domain**: `acme.com`
+
+**Extracted data**:
+```json
+{
+  "companyName": "Acme Inc",
+  "sector": "B2B SaaS",
+  "description": "CRM platform for sales teams to automate prospecting and outreach",
+  "location": "San Francisco, USA",
+  "services": [
+    "Lead generation",
+    "Email automation",
+    "CRM integration",
+    "Analytics dashboard"
+  ],
+  "keywords": [
+    "CRM", "sales automation", "prospecting",
+    "email outreach", "B2B sales", "lead generation"
+  ],
+  "suggestedCompetitors": [
+    "Salesforce", "HubSpot", "Pipedrive", "Lemlist", "Apollo.io"
+  ]
+}
+```
+
+---
+
+## Editing Analysis
+
+### Why Edit?
+
+- Add niche keywords AI missed
+- Include competitor aliases (e.g., "HubSpot CRM" not just "HubSpot")
+- Refine description for clarity
+- Add location if not detected
+
+### How to Edit
+
+1. Click **"Edit"** next to any field
+2. Modify text
+3. Click **"Save"**
+
+Changes apply to future prompt generation.
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Analysis failed">
+    **Reasons**:
+    - Domain doesn't exist
+    - Website is down
+    - Robots.txt blocks scraping
+    
+    **Solutions**:
+    - Check domain spelling
+    - Verify website is accessible
+    - Try again in a few minutes
+  </Accordion>
+
+  <Accordion title="Extracted info is wrong">
+    **Why**: Homepage doesn't clearly explain your business
+    
+    **Solutions**:
+    - Edit manually
+    - Update your website content
+    - Re-analyze after website update
+  </Accordion>
+
+  <Accordion title="No competitors suggested">
+    **Why**: Niche industry or new market
+    
+    **Solutions**:
+    - Add competitors manually
+    - Research competitors on Google
+    - Ask ChatGPT: "Who are the top competitors of [your company]?"
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Generate Prompts" icon="message" href="/ai-search/prompt-generation">
+    AI creates 10 test queries based on analysis
+  </Card>
+  <Card title="Run Analysis" icon="play" href="/ai-search/running-analysis">
+    Test on 5 AI engines
+  </Card>
+</CardGroup>
+
+---
+
+<Check>
+**Domain analyzed!** Next: [Generate test prompts →](/ai-search/prompt-generation)
+</Check>

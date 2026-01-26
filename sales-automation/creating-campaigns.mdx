@@ -1,0 +1,249 @@
+---
+title: "Creating Campaigns"
+description: "Set up and launch automated email campaigns with smart scheduling and tracking"
+---
+
+# Creating & Managing Campaigns
+
+Launch automated email campaigns that send personalized emails to hundreds of prospects.
+
+---
+
+## Quick Start
+
+<Steps>
+  <Step title="Select Prospects">
+    Go to **Prospects**, select contacts (checkbox), click **"Create Campaign"**
+  </Step>
+  <Step title="Name Your Campaign">
+    e.g., "Q1 2026 SaaS Outreach"
+  </Step>
+  <Step title="Write or Generate Email">
+    Use AI or write manually
+  </Step>
+  <Step title="Configure Settings">
+    Daily limit, tracking, schedule
+  </Step>
+  <Step title="Launch">
+    Click **"Launch Campaign"** and track results
+  </Step>
+</Steps>
+
+---
+
+## Campaign Settings
+
+<ParamField path="name" type="string" required>
+  **Campaign Name**
+  
+  Internal name for organization
+</ParamField>
+
+<ParamField path="subject" type="string" required>
+  **Email Subject**
+  
+  What recipients see in inbox
+</ParamField>
+
+<ParamField path="body" type="string" required>
+  **Email Body**
+  
+  Main message content (supports variables)
+</ParamField>
+
+<ParamField path="dailyLimit" type="number" default={50}>
+  **Daily Sending Limit**
+  
+  Max emails per day (10-500)
+</ParamField>
+
+<ParamField path="trackingEnabled" type="boolean" default={true}>
+  **Enable Tracking**
+  
+  Track opens and clicks
+</ParamField>
+
+---
+
+## Email Variables
+
+Personalize emails with variables:
+
+| Variable | Replaced With | Example |
+|----------|---------------|---------|
+| `{{firstName}}` | Recipient first name | "John" |
+| `{{lastName}}` | Recipient last name | "Doe" |
+| `{{company}}` | Company name | "Acme Inc" |
+| `{{website}}` | Company website | "acme.com" |
+| `{{industry}}` | Industry | "B2B SaaS" |
+| `{{location}}` | Location | "Paris, France" |
+
+**Example email**:
+```
+Hi {{firstName}},
+
+Saw that {{company}} recently expanded to {{location}}. 
+As you grow, outbound sales gets harder...
+```
+
+**Sends as**:
+```
+Hi John,
+
+Saw that Acme Inc recently expanded to Paris, France.
+As you grow, outbound sales gets harder...
+```
+
+<Tip>
+Always use `{{firstName}}` instead of hardcoding names!
+</Tip>
+
+---
+
+## Daily Limits & Scheduling
+
+### Why Limit Daily Sends?
+
+- **Prevents spam filters**: Gradual sending = better reputation
+- **Maintains deliverability**: ISPs like consistent volume
+- **Warm-up new domains**: Start slow, increase over time
+
+### Recommended Limits
+
+| Account Age | Recommended Limit |
+|-------------|-------------------|
+| Brand new (< 1 week) | 20-30/day |
+| New (1-4 weeks) | 50-100/day |
+| Established (1-3 months) | 100-200/day |
+| Warm (> 6 months) | 200-500/day |
+
+<Warning>
+Never jump from 50/day to 500/day! Increase gradually (10-20% per week).
+</Warning>
+
+---
+
+## Tracking & Analytics
+
+### What's Tracked
+
+<CardGroup cols={2}>
+  <Card title="Opens" icon="envelope-open">
+    When recipient opens email (1x1 tracking pixel)
+  </Card>
+  <Card title="Clicks" icon="mouse-pointer">
+    When recipient clicks a link (link tracking)
+  </Card>
+  <Card title="Replies" icon="reply">
+    When recipient responds (email parsing)
+  </Card>
+  <Card title="Bounces" icon="circle-xmark">
+    Email delivery failures
+  </Card>
+</CardGroup>
+
+### Campaign Dashboard
+
+View real-time stats:
+- **Sent**: Total emails delivered
+- **Open Rate**: % of opens
+- **Click Rate**: % of clicks
+- **Reply Rate**: % of replies
+- **Bounce Rate**: % of failures
+
+<Frame>
+  <img src="/images/campaign-dashboard.png" alt="Campaign analytics dashboard" />
+</Frame>
+
+---
+
+## Campaign Status
+
+| Status | Meaning | Actions |
+|--------|---------|---------|
+| **Draft** | Not launched yet | Edit, launch, or delete |
+| **Active** | Currently sending | Pause or view stats |
+| **Paused** | Temporarily stopped | Resume or stop |
+| **Completed** | All emails sent | View final stats |
+
+---
+
+## Managing Campaigns
+
+### Pause Campaign
+
+Click **"Pause"** to temporarily stop sending. Resume anytime.
+
+**Use cases**:
+- Need to update email template
+- Too many replies to handle
+- Bounce rate too high (> 5%)
+
+### Stop Campaign
+
+Click **"Stop"** to permanently end campaign. Can't resume.
+
+**Use cases**:
+- Campaign underperforming
+- Wrong target audience
+- Product/service changed
+
+### View Recipients
+
+Click **"Recipients"** to see:
+- Who received email (with timestamp)
+- Who opened (with timestamp)
+- Who clicked (with link clicked)
+- Who replied
+
+---
+
+## Best Practices
+
+### Segment Your Campaigns
+
+Don't send one email to everyone:
+- **By industry**: SaaS vs E-commerce vs Services
+- **By size**: Startups vs SMBs vs Enterprise
+- **By location**: US vs Europe vs APAC
+- **By role**: CEOs vs Managers vs Individual contributors
+
+### A/B Test
+
+Create 2 campaigns with:
+- Different subject lines
+- Different email length
+- Different CTAs
+- Different send times
+
+**Track**: Which gets better opens/clicks/replies?
+
+### Follow-Up Sequences
+
+Create 3 campaigns:
+1. **Initial email**: Soft introduction
+2. **Follow-up 1** (after 3 days): Add value (case study, blog post)
+3. **Follow-up 2** (after 7 days): Final ask
+
+<Tip>
+Response rates increase 50% with 2-3 follow-ups!
+</Tip>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Track Performance" icon="chart-line" href="/sales-automation/tracking-analytics">
+    Monitor campaign results and optimize
+  </Card>
+  <Card title="Best Practices" icon="lightbulb" href="/guides/best-practices">
+    Learn cold email strategies
+  </Card>
+</CardGroup>
+
+---
+
+<Check>
+**Campaign launched!** Track your results in [Analytics →](/sales-automation/tracking-analytics)
+</Check>

@@ -1,0 +1,202 @@
+---
+title: "Tracking & Analytics"
+description: "Monitor campaign performance with real-time metrics and optimize for better results"
+---
+
+# Campaign Tracking & Analytics
+
+Track opens, clicks, replies, and optimize your campaigns for maximum conversion.
+
+---
+
+## Analytics Dashboard
+
+Go to **Campaigns** > Select campaign > **Analytics**
+
+<Frame>
+  <img src="/images/campaign-analytics.png" alt="Campaign analytics" />
+</Frame>
+
+---
+
+## Key Metrics
+
+### 📧 Emails Sent
+
+Total emails delivered successfully.
+
+**What's good**: Depends on campaign size  
+**What to watch**: If < 95% of scheduled, check bounce rate
+
+### 📬 Open Rate
+
+% of recipients who opened your email.
+
+**Benchmark**:
+- Good: 30-40%
+- Great: 40-50%
+- Excellent: > 50%
+
+**Low open rate?** Check:
+- Subject line not compelling
+- Sender name not recognized
+- Email went to spam
+
+### 🖱️ Click Rate
+
+% of recipients who clicked a link.
+
+**Benchmark**:
+- Good: 2-5%
+- Great: 5-10%
+- Excellent: > 10%
+
+**Low click rate?** Check:
+- CTA not clear
+- Link not prominent
+- Email too long
+
+### 💬 Reply Rate
+
+% of recipients who responded.
+
+**Benchmark**:
+- Good: 3-5%
+- Great: 5-8%
+- Excellent: > 8%
+
+**Low reply rate?** Check:
+- Email not personalized
+- Value prop unclear
+- CTA too aggressive
+
+### ❌ Bounce Rate
+
+% of emails that failed to deliver.
+
+**Acceptable**: < 5%  
+**Concerning**: 5-10%  
+**Critical**: > 10%
+
+**High bounce rate?** Action:
+1. Remove bounced emails from list
+2. Re-verify remaining emails
+3. Check domain reputation
+
+---
+
+## Performance Over Time
+
+### Email Activity Chart
+
+See opens/clicks by day:
+
+<Frame>
+  <img src="/images/email-activity-chart.png" alt="Email activity over time" />
+</Frame>
+
+**Insights**:
+- Best days for opens (Tuesday-Thursday usually)
+- Best times (10-11 AM or 2-3 PM)
+- Drop-off points (when engagement dies)
+
+---
+
+## Recipient Details
+
+### Individual Tracking
+
+Click **"Recipients"** to see per-person data:
+
+| Recipient | Status | Opened | Clicked | Replied |
+|-----------|--------|--------|---------|---------|
+| john@acme.com | Sent | ✅ 3 times | ✅ 1 time | ✅ Yes |
+| sarah@beta.com | Sent | ✅ 1 time | ❌ No | ❌ No |
+| mike@gamma.com | Bounced | ❌ N/A | ❌ N/A | ❌ No |
+
+**Use cases**:
+- Follow up with openers who didn't click
+- Prioritize leads who clicked
+- Remove chronic non-openers
+
+---
+
+## Optimizing Campaigns
+
+### A/B Test Results
+
+If you ran A/B test:
+
+| Variant | Open Rate | Click Rate | Reply Rate | Winner |
+|---------|-----------|------------|------------|--------|
+| A: "Quick question" | 45% | 8% | 5% | ✅ |
+| B: "Introduction" | 32% | 4% | 2% | ❌ |
+
+**Insight**: Questions > Statements for subject lines
+
+### Best Performing Emails
+
+Sort by:
+- Highest open rate
+- Highest click rate
+- Most replies
+
+**Action**: Use winning emails as templates for future campaigns
+
+---
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Open rate is 0%">
+    **Possible reasons**:
+    - Campaign just launched (wait 24h)
+    - Email went to spam
+    - Tracking pixel blocked (Gmail, Apple Mail)
+    
+    **Solutions**:
+    - Check spam folders
+    - Verify domain SPF/DKIM
+    - Real open rate likely 10-20% higher
+  </Accordion>
+
+  <Accordion title="Bounce rate > 10%">
+    **Critical issue!** This damages sender reputation.
+    
+    **Solutions**:
+    1. Pause campaign immediately
+    2. Export bounced emails
+    3. Remove from database
+    4. Re-verify remaining emails (Hunter)
+    5. Resume with clean list
+  </Accordion>
+
+  <Accordion title="Getting spam complaints">
+    **Very serious!** Can blacklist your domain.
+    
+    **Solutions**:
+    1. Stop campaign
+    2. Review email content (remove spam triggers)
+    3. Add unsubscribe link
+    4. Only email opted-in contacts
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Best Practices" icon="lightbulb" href="/guides/best-practices">
+    Learn strategies to improve metrics
+  </Card>
+  <Card title="Email Copywriting" icon="pen" href="/guides/email-copywriting">
+    Write better emails that convert
+  </Card>
+</CardGroup>
+
+---
+
+<Check>
+**Track, optimize, repeat!** Use data to improve every campaign.
+</Check>
