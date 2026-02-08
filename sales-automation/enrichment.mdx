@@ -18,7 +18,7 @@ Turn company names into qualified contacts with verified email addresses.
 - LinkedIn profile
 - Verification score (0-100)
 
-**Powered by**: Hunter.io (industry leader with 98%+ deliverability)
+**Powered by**: our enrichment engine (industry leader with 98%+ deliverability)
 
 ---
 
@@ -26,7 +26,7 @@ Turn company names into qualified contacts with verified email addresses.
 
 ```mermaid
 graph LR
-    A[Prospect Domain] --> B[Hunter Searches]
+    A[Prospect Domain] --> B[our enrichment engine Searches]
     B --> C[Public Sources]
     C --> D[Email Found]
     D --> E[SMTP Verification]
@@ -91,7 +91,7 @@ Only email contacts with score > 90 for best campaign performance.
 
 ### Name & Role
 
-**What Hunter finds**:
+**What our enrichment engine finds**:
 - First and last name
 - Job title (CEO, CTO, Head of Marketing, etc.)
 - Seniority level (C-level, director, manager)
@@ -108,7 +108,7 @@ Role: Head of Marketing
 1. Company website (team page, about page)
 2. LinkedIn profiles
 3. Public directories
-4. Hunter's database (200M+ emails)
+4. our enrichment engine's database (200M+ emails)
 
 **Email pattern detection**:
 ```
@@ -119,7 +119,7 @@ jsmith@acme.com → Pattern: firstletterslast@domain
 
 ### Verification Process
 
-Hunter checks:
+our enrichment engine checks:
 1. **MX records**: Domain configured for email
 2. **SMTP validation**: Email mailbox exists
 3. **Catch-all detection**: Does domain accept all emails?
@@ -238,7 +238,7 @@ Don't email everyone at once! Pick 1-2 most relevant contacts per company.
 If enrichment failed, try again:
 1. Select prospect
 2. Click **"Re-Enrich"**
-3. Hunter searches again (sometimes finds new data)
+3. our enrichment engine searches again (sometimes finds new data)
 
 <Info>
 Re-enrichment costs another €0.02. Only do if first attempt failed.
@@ -291,7 +291,7 @@ Export to CSV:
 
 **Efficient**:
 - Enrich 50 prospects at once
-- Hunter batch API is faster
+- Batch enrichment is faster
 - Lower cost per prospect
 
 **Inefficient**:
@@ -340,7 +340,7 @@ Export to CSV:
     
     **If > 30 seconds**:
     - Check internet connection
-    - Check Hunter status: [status.hunter.io](https://status.hunter.io)
+    - Retry after a few minutes
     - Contact support@tldr.work
   </Accordion>
 </AccordionGroup>

@@ -15,10 +15,10 @@ graph TB
     B --> C[Sales Automation]
     B --> D[AI Brand Monitoring]
     
-    C --> E[Firecrawl: Find Prospects]
-    C --> F[Hunter: Verify Emails]
+    C --> E[our discovery engine: Find Prospects]
+    C --> F[our enrichment engine: Verify Emails]
     C --> G[GPT-5: Generate Emails]
-    C --> H[Resend: Send Emails]
+    C --> H[our delivery infrastructure: Send Emails]
     
     D --> I[GPT-5: Analyze Domain]
     D --> J[GPT-5: Generate Prompts]
@@ -35,7 +35,7 @@ graph TB
 
 ## Sales Automation Workflow
 
-### 1. Prospect Discovery (Firecrawl)
+### 1. Prospect Discovery (our discovery engine)
 
 **What happens when you search for prospects:**
 
@@ -43,10 +43,10 @@ graph TB
   <Step title="You enter search criteria">
     Example: "French bakeries in Paris"
   </Step>
-  <Step title="tldr.work queries Firecrawl API">
-    Firecrawl is a powerful web scraping tool that crawls the web intelligently.
+  <Step title="tldr.work queries our discovery engine API">
+    our discovery engine is a powerful web scraping tool that crawls the web intelligently.
   </Step>
-  <Step title="Firecrawl finds matching companies">
+  <Step title="our discovery engine finds matching companies">
     Returns company name, website, industry, location, and description.
   </Step>
   <Step title="Results appear in your dashboard">
@@ -55,21 +55,21 @@ graph TB
 </Steps>
 
 <Info>
-**Why Firecrawl?** It's specifically designed for business data extraction and returns structured, clean data.
+**Why our discovery engine?** It's specifically designed for business data extraction and returns structured, clean data.
 </Info>
 
-### 2. Email Enrichment (Hunter.io)
+### 2. Email Enrichment (our enrichment engine)
 
 **What happens when you enrich prospect data:**
 
 <Steps>
-  <Step title="tldr.work sends company domain to Hunter">
+  <Step title="tldr.work sends company domain to our enrichment engine">
     Example: `bakery-paris.fr`
   </Step>
-  <Step title="Hunter finds all email addresses">
+  <Step title="our enrichment engine finds all email addresses">
     Searches public sources: company website, LinkedIn, directories.
   </Step>
-  <Step title="Hunter verifies each email">
+  <Step title="our enrichment engine verifies each email">
     Checks if email exists and is deliverable (MX records, SMTP validation).
   </Step>
   <Step title="You get verified contacts">
@@ -121,7 +121,7 @@ Generate:
 GPT-5 uses the prospect's info to personalize each email. Never use generic templates!
 </Warning>
 
-### 4. Campaign Execution (Resend)
+### 4. Campaign Execution (our delivery infrastructure)
 
 **What happens when you launch a campaign:**
 
@@ -132,8 +132,8 @@ GPT-5 uses the prospect's info to personalize each email. Never use generic temp
   <Step title="Respects daily limits">
     Default: 50 emails/day (prevents spam flags). Customizable per campaign.
   </Step>
-  <Step title="Sends via Resend API">
-    Resend handles SMTP, SPF, DKIM, bounce handling.
+  <Step title="Sends via our delivery infrastructure API">
+    our delivery infrastructure handles SMTP, SPF, DKIM, bounce handling.
   </Step>
   <Step title="Tracks engagement">
     Opens, clicks, and replies are logged automatically.
@@ -154,7 +154,7 @@ GPT-5 uses the prospect's info to personalize each email. Never use generic temp
 
 <Steps>
   <Step title="tldr.work scrapes your website">
-    Uses Firecrawl to extract main content (text, metadata, structure).
+    Uses our discovery engine to extract main content (text, metadata, structure).
   </Step>
   <Step title="Sends content to GPT-5-mini">
     Asks AI to extract business information.
@@ -216,7 +216,7 @@ GPT-5 uses the prospect's info to personalize each email. Never use generic temp
 **Intent prompts** are the most important! They test if AI recommends you when users don't know you exist yet.
 </Warning>
 
-### 3. Multi-Engine Testing (OpenRouter)
+### 3. Multi-Engine Testing (our AI gateway)
 
 **What happens when you run an analysis:**
 
@@ -225,7 +225,7 @@ GPT-5 uses the prospect's info to personalize each email. Never use generic temp
     You can enable/disable any of the 10 generated prompts.
   </Step>
   <Step title="Sends each prompt to 5 AI engines">
-    Via OpenRouter API (unified gateway for all LLMs).
+    Via our AI gateway API (unified gateway for all LLMs).
   </Step>
   <Step title="Each engine generates a response">
     - ChatGPT (GPT-5)
@@ -257,7 +257,7 @@ Prompt: "Best bakery in Paris for wedding cakes"
 ```
 
 <Info>
-**Why OpenRouter?** It provides access to all major AI models via one API, with consistent formatting and billing.
+**Why our AI gateway?** It provides access to all major AI models via one API, with consistent formatting and billing.
 </Info>
 
 ### 4. Response Analysis (GPT-5)
@@ -298,15 +298,15 @@ Prompt: "Best bakery in Paris for wedding cakes"
 - **Redis + BullMQ**: Background job processing (emails, AI analysis)
 
 ### AI & APIs
-- **OpenRouter**: Unified gateway to all AI models (GPT, Claude, Gemini, etc.)
-- **Firecrawl**: Web scraping and company data extraction
-- **Hunter.io**: Email finding and verification
-- **Resend**: Transactional email delivery
+- **our AI gateway**: Unified gateway to all AI models (GPT, Claude, Gemini, etc.)
+- **our discovery engine**: Web scraping and company data extraction
+- **our enrichment engine**: Email finding and verification
+- **our delivery infrastructure**: Transactional email delivery
 
 ### Security & Billing
 - **JWT**: Secure authentication tokens
 - **Stripe**: Payment processing and subscription management
-- **Encrypted storage**: All API keys encrypted at rest
+- **Encrypted storage**: Sensitive credentials encrypted at rest
 
 ---
 
@@ -319,8 +319,8 @@ Prompt: "Best bakery in Paris for wedding cakes"
 - **AI analysis**: 5-10 minutes for 10 prompts × 5 engines (50 queries)
 
 ### Accuracy
-- **Prospect data**: 95%+ accuracy (Firecrawl filters out invalid data)
-- **Email verification**: 98%+ deliverability (Hunter.io's verification algorithm)
+- **Prospect data**: 95%+ accuracy (our discovery engine filters out invalid data)
+- **Email verification**: 98%+ deliverability (our enrichment engine's verification algorithm)
 - **AI generation**: GPT-5 produces human-quality text in 99% of cases
 
 ### Reliability

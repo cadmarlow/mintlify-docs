@@ -17,7 +17,6 @@ A **workspace** is your organization's container in tldr.work. It includes:
 - AI monitoring projects
 - Team members (coming soon)
 - Billing and usage data
-- API key configuration
 - Settings and preferences
 
 <Info>
@@ -81,7 +80,7 @@ Personal names ("John") get **30% better open rates** than company names ("Acme 
 <ParamField path="fromEmail" type="string">
   **Sender email address**
   
-  Must be verified with Resend. Default: your account email.
+  Must be a valid address you control. Default: your account email.
 </ParamField>
 
 **Requirements**:
@@ -143,79 +142,19 @@ Disable tracking for personal/sensitive campaigns to avoid seeming "salesy".
 
 ---
 
-## API Key Configuration
+## Infrastructure and Reliability
 
-By default, tldr.work uses **shared API keys** so you can start immediately.
+tldr.work handles technical providers and infrastructure internally.
 
-### Why Add Your Own Keys?
+What this means for you:
 
-<CardGroup cols={2}>
-  <Card title="Lower Costs" icon="euro-sign">
-    Save up to 50% by using at-cost pricing (no 40% margin)
-  </Card>
-  <Card title="Higher Limits" icon="chart-line">
-    Your own API quotas (e.g., Hunter 5,000 searches/month)
-  </Card>
-  <Card title="More Control" icon="sliders">
-    Manage rate limits and quotas directly
-  </Card>
-  <Card title="Data Ownership" icon="shield-check">
-    API calls go through your account (better privacy)
-  </Card>
-</CardGroup>
-
-### How to Add Keys
-
-Go to **Settings** > **API Keys**
-
-You'll see four sections:
-
-<Accordion title="1. Firecrawl API Key" icon="spider">
-  **Used for**: Prospect search and domain scraping
-  
-  **Get your key**: [firecrawl.dev](https://firecrawl.dev)
-  
-  **Cost**: ~$20/month for 5,000 scrapes
-  
-  **tldr.work charge**: €0.05/search (with 40% margin)  
-  **Your own key**: €0.03/search (at-cost)
-</Accordion>
-
-<Accordion title="2. Hunter.io API Key" icon="envelope">
-  **Used for**: Email finding and verification
-  
-  **Get your key**: [hunter.io/api-keys](https://hunter.io/api-keys)
-  
-  **Cost**: $49/month for 5,000 searches or $0.01/search
-  
-  **tldr.work charge**: €0.02/email  
-  **Your own key**: €0.014/email (at-cost)
-</Accordion>
-
-<Accordion title="3. OpenRouter API Key" icon="robot">
-  **Used for**: AI queries (ChatGPT, Claude, Gemini, etc.)
-  
-  **Get your key**: [openrouter.ai/keys](https://openrouter.ai/keys)
-  
-  **Cost**: Pay-per-use (~$5/1M tokens, varies by model)
-  
-  **tldr.work charge**: €0.05-0.15/query (with margin)  
-  **Your own key**: €0.035-0.10/query (at-cost)
-</Accordion>
-
-<Accordion title="4. Resend API Key" icon="paper-plane">
-  **Used for**: Sending campaign emails
-  
-  **Get your key**: [resend.com/api-keys](https://resend.com/api-keys)
-  
-  **Cost**: $20/month for 50,000 emails or $0.0001/email
-  
-  **tldr.work charge**: €0.001/email  
-  **Your own key**: €0.0001/email (10x cheaper!)
-</Accordion>
+- no external API setup required
+- no provider account switching
+- one simplified credit balance inside Billing
+- one consistent experience across features
 
 <Info>
-See detailed setup guide: [API Keys Configuration](/getting-started/api-keys)
+You only need to configure product settings in tldr.work. Infrastructure dependencies are abstracted by default.
 </Info>
 
 ---
@@ -264,7 +203,7 @@ Future features:
 - **Invite team members**: Share workspace with colleagues
 - **Role-based access**: Admin, Manager, Viewer permissions
 - **Activity log**: See who did what and when
-- **API key permissions**: Control who can modify settings
+- **Advanced admin controls**: Fine-grained workspace permissions
 
 ---
 
@@ -302,14 +241,6 @@ Changes apply immediately. Existing campaigns use old settings until relaunched.
 - ✅ Monitor bounce rate (should be < 5%)
 - ❌ Don't send 500 emails on day 1 (instant spam flag)
 
-### API Keys
-- ✅ Add your own keys if sending > 100 emails/week
-- ✅ Use dedicated API accounts (don't share with other tools)
-- ✅ Monitor API usage in each service's dashboard
-- ❌ Don't share API keys with others (security risk)
-
----
-
 ## Common Questions
 
 <AccordionGroup>
@@ -321,9 +252,9 @@ Changes apply immediately. Existing campaigns use old settings until relaunched.
     No. Old campaigns keep their original sender name. New campaigns use the updated name.
   </Accordion>
 
-  <Accordion title="What if I exceed my API key limits?">
-    If using your own keys: API requests fail until you upgrade your API plan.  
-    If using shared keys: tldr.work charges your credits until balance depletes.
+  <Accordion title="What if I run out of credits?">
+    Billable actions pause when credits are exhausted.  
+    You can upgrade your plan in **Billing** or wait for your next cycle reset.
   </Accordion>
 
   <Accordion title="Can I have multiple workspaces?">
@@ -340,8 +271,8 @@ Changes apply immediately. Existing campaigns use old settings until relaunched.
 ## Next Steps
 
 <CardGroup cols={2}>
-  <Card title="Configure API Keys" icon="key" href="/getting-started/api-keys">
-    Detailed guide to adding your own API keys
+  <Card title="Billing & Credits" icon="credit-card" href="/billing/plans">
+    Understand plans, credits, and usage
   </Card>
   <Card title="Find Prospects" icon="magnifying-glass" href="/sales-automation/finding-prospects">
     Start building your lead database

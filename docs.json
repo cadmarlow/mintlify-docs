@@ -34,8 +34,7 @@
             "pages": [
               "getting-started/sign-up",
               "getting-started/first-steps",
-              "getting-started/workspace-setup",
-              "getting-started/api-keys"
+              "getting-started/workspace-setup"
             ]
           },
           {
@@ -69,15 +68,6 @@
               "billing/usage-tracking",
               "billing/upgrading",
               "billing/credits"
-            ]
-          },
-          {
-            "group": "Integrations",
-            "pages": [
-              "integrations/firecrawl",
-              "integrations/hunter",
-              "integrations/openrouter",
-              "integrations/resend"
             ]
           },
           {
