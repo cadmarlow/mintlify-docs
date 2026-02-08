@@ -69,15 +69,6 @@
               "billing/upgrading",
               "billing/credits"
             ]
-          },
-          {
-            "group": "Guides",
-            "pages": [
-              "guides/best-practices",
-              "guides/prompt-engineering",
-              "guides/email-copywriting",
-              "guides/troubleshooting"
-            ]
           }
         ]
       }
